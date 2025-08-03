@@ -12,6 +12,7 @@ export default {
         'circular-web':['circular-web','sanf-serif'],
         'robert-medium':['robert-medium','sanf-serif'],
         'robert-regular':['robert-regular','sanf-serif'],
+        valorant:['valorant','sans-serif'],
 
       },
       colors:{
@@ -29,6 +30,9 @@ export default {
           100:'#8E983f',
           300:'#edff66'
 
+        },
+        pink:{
+          100:'#ff4654'
         }
       }
     },
