@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import Button from './Button'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1)
@@ -20,7 +22,30 @@ export const Hero = () => {
     setCurrentIndex(upcomingVideoIndex)
     
    }
+   
+   useGSAP(()=>{
+    if(hasClicked){
+      gsap.set('#next-video',{visibility: 'visible'})
 
+      gsap.to('#next-video',{
+        transformOrigin : 'center center',
+        scale : 1,
+        width : '100%' ,
+        height : '100%',
+        duration : 1,
+        ease : 'power1.inOut',
+        onStart : () => nextVdRef.current.play(),
+      })
+
+      gsap.from('#current-video',{
+        transformOrigin : 'center center',
+        scale : 0,
+        duration : 1.5,
+        ease:'power1.inOut'
+      })
+    }
+
+   },{dependencies :[currentIndex] , revertOnUpdate:true})
    const getVideoSrc = (index) => `videos/hero-${index}.mp4`
 
    const handleVideoLoad = () => {
@@ -43,7 +68,7 @@ export const Hero = () => {
                   muted
                   loop
                   autoPlay
-                  id='current-video'             
+                              
                   onLoadedData={handleVideoLoad}
                 />
             </div>
@@ -56,6 +81,8 @@ export const Hero = () => {
           className='absolute-center invisible absolute z-20 size-64 object-cover
           object-center '
           onLoadedData={handleVideoLoad}
+          id='next-video'
+          
         />
         <video 
           src={getVideoSrc(currentIndex)}
@@ -64,6 +91,7 @@ export const Hero = () => {
           muted
           className='absolute-center absolute z-10 h-full w-full object-cover'
           onLoadedData={handleVideoLoad}
+          id='current-video'
         />
      </div>
      <h1 className='font-valorant hero-heading absolute bottom-5 tracking-tighter
@@ -71,7 +99,8 @@ export const Hero = () => {
      <div className='absolute left-0 top-0 z-40 size-full pointer-events-none'>
         <div className='mt-24 px-5 sm:px-10 pointer-events-auto'> 
           <h1 className='font-valorant hero-heading text-blue-100 tracking-tighter' style={{fontFamily: '"valorant", "Arial Black", sans-serif'}} >
-              valore<b>n</b>t 
+              valora<b>n</b>t 
+              
           </h1>
           <Button id='play btn' title='Play Now' containerClass='!bg-pink-100 flex-center gap-1 '  />
         </div>
