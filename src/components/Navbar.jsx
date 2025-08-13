@@ -1,6 +1,7 @@
 import {useEffect,useRef} from 'react'
 import Button from './Button'
 
+const navItems = ['Game Info','Media','News','Support','Esport']
 const Navbar = () => {
     const navContainerRef = useRef(null)
 
@@ -13,13 +14,22 @@ const Navbar = () => {
                 <div className='flex items-center gap-7'>
 
                      <img src="/img/riot.png" alt="logo" 
-                    className='w-10 '/>
+                    className='w-20 '/>
 
                     <img src="/img/logo.png" alt="logo" 
-                    className='w-10 '/>
+                    className='w-20 '/>
 
-                
- 
+                </div>
+                <div className='flex h-full items-center'>
+                  <div className='hidden md:block'>
+                    {navItems.map((item)=>(
+                      <a>
+                        {item}
+                      </a>
+                    ))}
+
+                  </div>
+
                 </div>
             </nav>
 
