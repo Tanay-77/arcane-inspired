@@ -1,10 +1,59 @@
-import {useEffect,useRef} from 'react'
+import {use, useEffect,useRef,useState} from 'react'
 import Button from './Button'
+import { useWindowScroll } from 'react-use'
+import gsap from 'gsap'
 
 const navItems = ['Game Info','Media','About','Support','Esport']
 const Navbar = () => {
     const navContainerRef = useRef(null)
     const audioElementRef = useRef(null)
+    const [isAudioPlaying,SetIsAudioPlaying] = useState(false)
+    const [isIndicatorActive , SetIsIndicatorActive] = useState(false)
+    const[lastScrollY , SetLastScrollY] = useState(0)
+    const [isNavVisible , setIsNavVisible] = useState(true)
+
+    const toggleAudioIndicator = () => {
+      SetIsAudioPlaying(prev => !prev)
+
+      SetIsIndicatorActive(prev => !prev)
+
+    }
+
+    useEffect(()=>{
+      if(isAudioPlaying){
+        audioElementRef.current.play()
+      }
+      else{
+        audioElementRef.current.pause()
+      }
+    },[isAudioPlaying])
+
+    const {y:currentScrollY} = useWindowScroll()
+
+    useEffect(()=>{
+      if(currentScrollY === 0){
+        setIsNavVisible (true)
+        navContainerRef.current.classList.remove('floating-nav')
+      } else if(currentScrollY > lastScrollY){
+        setIsNavVisible(true)
+        navContainerRef.current.classList.add('floating-nav')
+      } else if(currentScrollY < lastScrollY){
+        setIsNavVisible(true)
+        navContainerRef.current.classList.add('floating-nav')
+      }
+
+      SetLastScrollY(currentScrollY)
+    },[currentScrollY])
+
+    useEffect(()=>{
+      gsap.to(navContainerRef , {
+        y:isNavVisible ? 0 : -100,
+        opacity : isNavVisible ? 1 : 0,
+        duration : 0.2 ,
+      })
+
+
+    },[isNavVisible])
 
   return (
     <div ref={navContainerRef} className='fixed inset-x-0 top-4
@@ -32,7 +81,16 @@ const Navbar = () => {
                   </div>
 
                   <button className='ml-10 flex items-center space-x-0.5' 
-                  onClick={toggleAudioIndicator}></button>
+                  onClick={toggleAudioIndicator}>
+                    <audio ref={audioElementRef} className='hidden' src="/audio/loop.mp3" loop />
+                    {[1,2,3,4].map((bar)=>(
+                      <div key={bar} className={`indicator-line ${isIndicatorActive ? 'active' : ''}`} style={{
+                        animationDelay : `${bar} * {0.1}s`}}
+                      ></div>
+                    ))}
+                    
+                  </button>
+
 
                 </div>
             </nav>
