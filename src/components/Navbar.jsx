@@ -1,9 +1,10 @@
 import {useEffect,useRef} from 'react'
 import Button from './Button'
 
-const navItems = ['Game Info','Media','News','Support','Esport']
+const navItems = ['Game Info','Media','About','Support','Esport']
 const Navbar = () => {
     const navContainerRef = useRef(null)
+    const audioElementRef = useRef(null)
 
   return (
     <div ref={navContainerRef} className='fixed inset-x-0 top-4
@@ -23,12 +24,15 @@ const Navbar = () => {
                 <div className='flex h-full items-center'>
                   <div className='hidden md:block'>
                     {navItems.map((item)=>(
-                      <a>
+                      <a key={item} href={`#${item.toLowerCase()}`} className='nav-hover-btn'>
                         {item}
                       </a>
                     ))}
 
                   </div>
+
+                  <button className='ml-10 flex items-center space-x-0.5' 
+                  onClick={toggleAudioIndicator}></button>
 
                 </div>
             </nav>
