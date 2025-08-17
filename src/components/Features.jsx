@@ -1,4 +1,5 @@
 import React from 'react'
+import Bentocard from './Bentocard'
 
 const Features = () => {
   return (
@@ -14,6 +15,15 @@ const Features = () => {
                 More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, 
                 just as no two highlight reels will look the same.
             </p>
+
+        </div>
+        <div className='border-hsla relative mb-7 h-96
+        w-full overflow-hidden rounded-md md:h-[65vh]'>
+            <Bentocard  
+              src='videos/feature-1.mp4'
+              title = {<>radi<b>n</b>t</>}
+              description = 'Valorant'/>
+              
 
         </div>
 
