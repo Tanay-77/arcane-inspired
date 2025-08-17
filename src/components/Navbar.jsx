@@ -9,7 +9,7 @@ const Navbar = () => {
     const audioElementRef = useRef(null)
     const [isAudioPlaying,SetIsAudioPlaying] = useState(false)
     const [isIndicatorActive , SetIsIndicatorActive] = useState(false)
-    const[lastScrollY , SetLastScrollY] = useState(0)
+    const [lastScrollY , SetLastScrollY] = useState(0)
     const [isNavVisible , setIsNavVisible] = useState(true)
 
     const toggleAudioIndicator = () => {
@@ -32,13 +32,13 @@ const Navbar = () => {
 
     useEffect(()=>{
       if(currentScrollY === 0){
-        setIsNavVisible (true)
+        setIsNavVisible(true)
         navContainerRef.current.classList.remove('floating-nav')
       } else if(currentScrollY > lastScrollY){
-        setIsNavVisible(true)
+        setIsNavVisible(false) 
         navContainerRef.current.classList.add('floating-nav')
       } else if(currentScrollY < lastScrollY){
-        setIsNavVisible(true)
+        setIsNavVisible(true) 
         navContainerRef.current.classList.add('floating-nav')
       }
 
@@ -47,9 +47,10 @@ const Navbar = () => {
 
     useEffect(()=>{
       gsap.to(navContainerRef.current , {
-        y:isNavVisible ? 0 : -100,
-        opacity : isNavVisible ? 1 : 0,
-        duration : 0.2 ,
+        y: isNavVisible ? 0 : -100,
+        opacity: isNavVisible ? 1 : 0,
+        duration: 0.3,
+        ease: "power2.inOut"
       })
 
 
