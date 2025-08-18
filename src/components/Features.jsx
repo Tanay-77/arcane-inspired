@@ -32,9 +32,16 @@ const Features = () => {
             <Bentocard 
              src='videos/feature-2.mp4'
              title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here
-             '
+             description='charcter 2 here'
             />
+          </div>
+          <div className='bento-tilt_1 row-span-1 ms-32 
+          md:col-span-1 md:ms-0'>
+            <Bentocard 
+             src='videos/feature-3.mp4'
+             title={<>Char<b>c</b>cter2</>}
+            description='charcter 3 here'/>
+             
           </div>
         </div>
 
