@@ -9,14 +9,15 @@ const Features = () => {
                 <p className='font-circular-web text-lg text-blue-100'>
                     YOUR AGENTS
                 </p>
-            </div>
+            
             <p className='max-w-md font-circular-web text-lg
             text-blue-100 opacity-50'>
                 More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, 
                 just as no two highlight reels will look the same.
             </p>
+            </div>
 
-        </div>
+        
         <div className='border-hsla relative mb-7 h-96
         w-full overflow-hidden rounded-md md:h-[65vh]'>
             <Bentocard  
@@ -26,7 +27,18 @@ const Features = () => {
               
 
         </div>
+        <div className='grid h-[135vh] grid-cols-2 grid-rows-3 gap-7'>
+          <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-2.mp4'
+             title={<>Char<b>c</b>cter2</>}
+             description='charcter 2 here
+             '
+            />
+          </div>
+        </div>
 
+        </div>
     </section>
   )
 }
