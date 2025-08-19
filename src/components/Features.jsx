@@ -27,7 +27,7 @@ const Features = () => {
               
 
         </div>
-        <div className='grid h-[135vh] grid-cols-2 grid-rows-3 gap-7'>
+        <div className='grid h-[135vh] grid-cols-3 grid-rows-4 gap-7'>
           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
              src='videos/feature-2.mp4'
@@ -35,15 +35,49 @@ const Features = () => {
              description='charcter 2 here'
             />
           </div>
-          <div className='bento-tilt_1 row-span-1 ms-32 
-          md:col-span-1 md:ms-0'>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
-             src='videos/feature-3.mp4'
+             src='videos/feature-2.mp4'
              title={<>Char<b>c</b>cter2</>}
-            description='charcter 3 here'/>
-             
+             description='charcter 2 here'
+            />
           </div>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-2.mp4'
+             title={<>Char<b>c</b>cter2</>}
+             description='charcter 2 here'
+            />
+          </div>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-2.mp4'
+             title={<>Char<b>c</b>cter2</>}
+             description='charcter 2 here'
+            />
+          </div>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-2.mp4'
+             title={<>Char<b>c</b>cter2</>}
+             description='charcter 2 here'
+            />
+          </div>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-2.mp4'
+             title={<>Char<b>c</b>cter2</>}
+             description='charcter 2 here'
+            />
+          </div>
+          
+          
+          
+          
+        
+         
         </div>
+        
 
         </div>
     </section>
