@@ -48,23 +48,23 @@ const Features = () => {
           </div>
            <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
-             src='videos/feature-2.mp4'
-             title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here'
+             src='videos/feature-5.mp4'
+             title={<>So<b>v</b>a</>}
+             
             />
           </div>
            <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
-             src='videos/feature-2.mp4'
-             title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here'
+             src='videos/feature-6.mp4'
+             title={<>Sa<b>g</b>e</>}
+             
             />
           </div>
            <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
-             src='videos/feature-2.mp4'
-             title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here'
+             src='videos/feature-7.mp4'
+             title={<>re<b>y</b>na</>}
+             
             />
           </div>
           
