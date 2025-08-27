@@ -138,7 +138,7 @@ export const Hero = () => {
         <div className='absolute left-0 top-0 z-40 size-full pointer-events-none'>
         <div className='mt-32 px-5 sm:px-10 pointer-events-auto'> 
           <h1 className='font-valorant hero-heading text-blue-100 tracking-tighter' style={{fontFamily: '"valorant", "Arial Black", sans-serif'}} >
-              valora<b>n</b>t 
+              valor<span className="text-pink-100">a</span>nt 
           </h1>
           <Button id='play btn' title='Play Now' containerClass='!bg-pink-100 flex-center gap-1 '  />
         </div>
@@ -146,7 +146,7 @@ export const Hero = () => {
      </div>   
      
         <h1 className='font-valorant hero-heading absolute bottom-5 tracking-tighter
-        right-5  text-black px-5 ' style={{fontFamily: '"valorant", "Arial Black", sans-serif'}}>SEASON 2025</h1>
+        right-5  text-black px-5 ' style={{fontFamily: '"valorant", "Arial Black", sans-serif'}}>SE<span className="text-pink-100">A</span>SON 2025</h1>
     </div >
   )
 }
