@@ -32,22 +32,19 @@ const Features = () => {
             <Bentocard 
              src='videos/feature-2.mp4'
              title={<>JE<b>T</b>T</>}
-             description='Representing her home country of South Korea, Jetts agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.'
+              />
+          </div>
+           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
+            <Bentocard 
+             src='videos/feature-3.mp4'
+             title={<>Pho<b>e</b>nix</>}
             />
           </div>
            <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
-             src='videos/feature-2.mp4'
-             title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here'
-            />
-          </div>
-           <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
-            <Bentocard 
-             src='videos/feature-2.mp4'
-             title={<>Char<b>c</b>cter2</>}
-             description='charcter 2 here'
-            />
+             src='videos/feature-4.mp4'
+             title={<>Gek<b>k</b>o</>}
+             />
           </div>
            <div className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
             <Bentocard 
