@@ -18,7 +18,7 @@ const Story = () => {
           <div className='story-img-container'>
             <div className='story-img-mask'>
               <div className='story-img-content'>
-                <img src="/img/entrance.webp" alt="img" className='object-contain' />
+                <img src="/img/map.jpg" alt="img" className='object-contain' />
               </div>
             </div>
 

@@ -22,8 +22,8 @@ const Features = () => {
         w-full overflow-hidden rounded-md md:h-[65vh]'>
             <Bentocard  
               src='videos/feature-1.mp4'
-              title = {<>radi<b>n</b>t</>}
-              description = 'Valorant'/>
+              title = {<>agen<b>t</b>s</>}
+              />
               
 
         </div>
